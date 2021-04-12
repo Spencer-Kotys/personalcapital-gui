@@ -102,3 +102,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Specific gitignore files
+
+# session.json - very import to ignore, allows login without two factor authentication
+session.json
