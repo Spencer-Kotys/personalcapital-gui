@@ -107,3 +107,7 @@ dist
 
 # session.json - very import to ignore, allows login without two factor authentication
 session.json
+
+# email.txt and password.txt - use these files to store username and password, very important to ignore
+email.txt
+password.txt
