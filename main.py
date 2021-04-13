@@ -1,1 +1,1 @@
-print("main.py")
+print("$100")

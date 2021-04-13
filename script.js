@@ -12,5 +12,6 @@ function api() {
     console.log('main.py done')
     results = results.toString()
     console.log('results', results)
+    document.getElementById("net").innerHTML = 'Net Worth ' + results
   })
 }
