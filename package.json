@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.0.0-beta3",
+    "personal-capital-sdk": "^1.0.1",
     "python-shell": "^3.0.0"
   }
 }
