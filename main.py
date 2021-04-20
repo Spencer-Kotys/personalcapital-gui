@@ -30,13 +30,13 @@ class PewCapital(PersonalCapital):
 
 
 pc = PewCapital()
-pc.load_session()
+pc.load_session() # load session from json
 
 emailFile = open("email.txt", "r")
 passwordFile = open("password.txt", "r")
 
-email = emailFile.read()
-password = passwordFile.read()
+email = emailFile.read() # read email from email file
+password = passwordFile.read() # read password from password file
 
 try:
     pc.login(email, password)
@@ -48,6 +48,9 @@ except RequireTwoFactorException:
 accounts_response = pc.fetch('/newaccount/getAccounts')
 accounts = accounts_response.json()['spData']
 
-print('Networth:{0}'.format(accounts['networth']))
+print('Networth ${0}'.format(accounts['networth']))
+print('Assets ${0}'.format(accounts['assets']))
+print('Liabilities ${0}'.format(accounts['liabilities']))
+print('Investments ${0}'.format(accounts['investmentAccountsTotal']))
 
-pc.save_session()
+pc.save_session() # save session to json

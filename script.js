@@ -3,15 +3,17 @@ var pyshell = require('python-shell')
 
 function api() {
   console.log("script.js")
-  document.getElementById("net").innerHTML = "Net Worth $1"
-  document.getElementById("assets").innerHTML = "Assets $1"
-  document.getElementById("liabilities").innerHTML = "Liabilities $1"
-  document.getElementById("investments").innerHTML = "Investments $1"
+  document.getElementById("net").innerHTML = "Net Worth $0"
+  document.getElementById("assets").innerHTML = "Assets $0"
+  document.getElementById("liabilities").innerHTML = "Liabilities $0"
+  document.getElementById("investments").innerHTML = "Investments $0"
   pyshell.PythonShell.run('main.py', null, function (err, results) {
     if (err) err
     console.log('main.py done')
-    results = results.toString()
-    console.log('results', results)
-    document.getElementById("net").innerHTML = results
+    console.log('results', results) // print out list of results
+    document.getElementById("net").innerHTML = results[0]
+    document.getElementById("assets").innerHTML = results[1]
+    document.getElementById("liabilities").innerHTML = results[2]
+    document.getElementById("investments").innerHTML = results[3]
   })
 }
