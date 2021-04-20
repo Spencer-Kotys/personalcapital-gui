@@ -9,6 +9,7 @@ function createWindow () {
       contextIsolation: false
     }
   })
+  window.webContents.openDevTools() // open DevTools automatically
   window.loadFile('index.html')
 }
 
