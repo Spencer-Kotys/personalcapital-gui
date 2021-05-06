@@ -10,7 +10,7 @@ function createWindow () {
     }
   })
   window.webContents.openDevTools() // open DevTools automatically
-  window.loadFile('index.html')
+  window.loadFile('info.html')
 }
 
 app.on('ready', createWindow)
