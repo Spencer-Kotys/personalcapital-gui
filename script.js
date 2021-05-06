@@ -17,3 +17,7 @@ function api() {
     document.getElementById("investments").innerHTML = results[3]
   })
 }
+
+function login() {
+  console.log("hello world")
+}
