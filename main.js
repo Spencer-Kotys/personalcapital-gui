@@ -10,7 +10,7 @@ function createWindow () {
     }
   })
   window.webContents.openDevTools() // open DevTools automatically
-  window.loadFile('info.html')
+  window.loadFile('login.html')
 }
 
 app.on('ready', createWindow)
