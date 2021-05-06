@@ -19,9 +19,15 @@ function api() {
 }
 
 function login() {
-  console.log("hello world")
   var email = document.getElementById("email").value
   console.log(email)
   var password = document.getElementById("password").value
   console.log(password)
+  let options = {
+    args: [email, password]
+  }
+  pyshell.PythonShell.run('login.py', options, function (err, results) {
+    if (err) err
+    console.log('results', results)
+  })
 }
