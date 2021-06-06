@@ -31,3 +31,15 @@ function login() {
     console.log('results', results)
   })
 }
+
+function tfa() {
+  var tfa = document.getElementById("tfa").value
+  console.log(tfa)
+  let options = {
+    args: [tfa]
+  }
+  pyshell.PythonShell.run('tfa.py', options, function (err, results) ) {
+    if (err) err
+    console.log('results', results)
+  })
+}
