@@ -36,7 +36,7 @@ function tfa() {
   var tfa = document.getElementById("tfa").value
   console.log(tfa)
   let options = {
-    args: [tfa]
+    args: [email, password, tfa]
   }
   pyshell.PythonShell.run('tfa.py', options, function (err, results) ) {
     if (err) err
