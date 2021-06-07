@@ -1,4 +1,4 @@
-from personalcapital import PersonalCapital
+from personalcapital import PersonalCapital, TwoFactorVerificationModeEnum
 import time
 import json
 import sys # for input from javascript
@@ -12,6 +12,7 @@ try:
     pc.login(email, password)
 except:
     print("TwoFactorRequired")
+    pc.two_factor_challenge(TwoFactorVerificationModeEnum.SMS)
 else:
     accounts_response = pc.fetch('/newaccount/getAccounts')
     try:
