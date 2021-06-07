@@ -33,10 +33,10 @@ function login() {
 }
 
 function tfa() {
-  var tfa = document.getElementById("tfa").value
-  console.log(tfa)
+  var code = document.getElementById("tfa").value
+  console.log(code)
   let options = {
-    args: [email, password, tfa]
+    args: [email, password, code]
   }
   pyshell.PythonShell.run('tfa.py', options, function (err, results) {
     if (err) err
