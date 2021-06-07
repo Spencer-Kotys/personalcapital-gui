@@ -38,7 +38,7 @@ function tfa() {
   let options = {
     args: [email, password, tfa]
   }
-  pyshell.PythonShell.run('tfa.py', options, function (err, results) ) {
+  pyshell.PythonShell.run('tfa.py', options, function (err, results) {
     if (err) err
     console.log('results', results)
   })
