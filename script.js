@@ -33,7 +33,7 @@ function login() {
 }
 
 function tfa() {
-  var code = document.getElementById("tfa").value
+  var code = document.getElementById("twofac").value
   console.log(code)
   let options = {
     args: [email, password, code]
