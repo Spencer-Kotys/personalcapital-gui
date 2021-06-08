@@ -18,6 +18,12 @@
         <label for="Password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password">
       </div>
+      <div class="d-none"> <!-- changes to d-block to become visible -->
+        <div class="mb-3">
+          <label for="tfa" class="form-label">Two Factor Authentication Code</label>
+          <input type="text" class="form-control" id="twofac">
+        </div>
+      </div>
       </div>
       <button type="submit" class="btn btn-primary" onclick="login()" formaction="./tfa.html">Log in</button>
     </form>
