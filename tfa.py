@@ -33,9 +33,12 @@ class PewCapital(PersonalCapital):
 pc = PewCapital()
 pc.load_session() # load session from json
 
-email = sys.argv[1] # Takes first argument
-password = sys.argv[2] # Takes second argument
-code = sys.argv[3] # Takes third argument
+emailFile = open("email.txt", "r")
+passwordFile = open("password.txt", "r")
+
+email = emailFile.read() # read email from email file
+password = passwordFile.read() # read password from password file
+code = sys.argv[1] # Takes first arguments
 
 try:
     pc.login(email, password)
@@ -44,12 +47,12 @@ except RequireTwoFactorException:
     pc.two_factor_authenticate(TwoFactorVerificationModeEnum.SMS, code)
     pc.authenticate_password(password)
 
-#accounts_response = pc.fetch('/newaccount/getAccounts')
-#accounts = accounts_response.json()['spData']
+accounts_response = pc.fetch('/newaccount/getAccounts')
+accounts = accounts_response.json()['spData']
 
-#print('Networth ${0}'.format(accounts['networth']))
-#print('Assets ${0}'.format(accounts['assets']))
-#print('Liabilities ${0}'.format(accounts['liabilities']))
-#print('Investments ${0}'.format(accounts['investmentAccountsTotal']))
+print('Networth ${0}'.format(accounts['networth']))
+print('Assets ${0}'.format(accounts['assets']))
+print('Liabilities ${0}'.format(accounts['liabilities']))
+print('Investments ${0}'.format(accounts['investmentAccountsTotal']))
 
 pc.save_session() # save session to json
