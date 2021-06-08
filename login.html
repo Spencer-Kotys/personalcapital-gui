@@ -10,22 +10,23 @@
     <h1>Log into Personal Capital</h1>
     <form>
       <div class="mx-auto" style="width: 500px;">
-      <div class="mb-3">
+      <div class="mb-3" id="emaildiv">
         <label for="Email" class="form-label">Email address</label>
         <input type="email" class="form-control" id="email">
       </div>
-      <div class="mb-3">
+      <div class="mb-3" id="passdiv">
         <label for="Password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password">
       </div>
-      <div class="d-none"> <!-- changes to d-block to become visible -->
+      <div class="d-none" id="twodiv"> <!-- changes to d-block to become visible -->
         <div class="mb-3">
           <label for="tfa" class="form-label">Two Factor Authentication Code</label>
           <input type="text" class="form-control" id="twofac">
         </div>
       </div>
       </div>
-      <button type="submit" class="btn btn-primary" onclick="login()" formaction="./tfa.html">Log in</button>
+      <button type="button" class="btn btn-primary" onclick="login()" id="button1">Login</button>
+      <button type="button" class="d-none" onclick="login()" id="button2">Submit Two Factor Code</button>
     </form>
   </center>
 </body>

@@ -30,6 +30,11 @@ function login() {
     if (err) err
     console.log('results', results)
   })
+  document.getElementById("emaildiv").setAttribute("class", "d-none") // makes email invisible
+  document.getElementById("passdiv").setAttribute("class", "d-none") // makes password invisible
+  document.getElementById("twodiv").setAttribute("class", "d-block") // makes two factor authentication visible
+  document.getElementById("button1").setAttribute("class", "d-none") // makes first button invisible
+  document.getElementById("button2").setAttribute("class", "btn btn-primary") // makes second button visible
 }
 
 function tfa() {
