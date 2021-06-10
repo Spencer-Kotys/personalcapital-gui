@@ -38,14 +38,10 @@ function login() {
 }
 
 function tfa() {
-  var email = document.getElementById("email").value
-  console.log(email)
-  var password = document.getElementById("password").value
-  console.log(password)
   var code = document.getElementById("twofac").value
   console.log(code)
   let options = {
-    args: [email, password, code]
+    args: [code]
   }
   pyshell.PythonShell.run('tfa.py', options, function (err, results) {
     if (err) err
