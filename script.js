@@ -3,14 +3,10 @@ var pyshell = require('python-shell')
 
 function check(file) {
   const fs = require('fs')
-  try {
-    if(fs.existsSync(file)) {
-        console.log("This file exists.")
-    } else {
-        console.log('This file does not exist.')
-    }
-  } catch (err) {
-    console.error(err);
+  if(fs.existsSync(file)) {
+    return true
+  } else {
+    return false
   }
 }
 
