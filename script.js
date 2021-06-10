@@ -10,6 +10,15 @@ function check(file) {
   }
 }
 
+function start() {
+  if (check("session.json")) {
+    console.log("Yes")
+  }
+  else {
+    console.log("No")
+  }
+}
+
 function api() {
   console.log("script.js")
   document.getElementById("net").innerHTML = "Net Worth $0"
