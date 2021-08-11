@@ -36,7 +36,7 @@ pc = PewCapital()
 pc.load_session() # load session from json
 
 try:
-    emailfile = open("email.txt", "w")
+    emailfile = open("email.txt", "w") # Hello, this is not correct
     emailfile.write(email)
 except:
     print("Creating email file failed")
