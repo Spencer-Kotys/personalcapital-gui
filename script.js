@@ -13,6 +13,7 @@ function check(file) {
 function start() {
   if (check("session.json")) {
     console.log("Yes")
+    window.location.href = 'info.html' //changes window to info if session already exists
   }
   else {
     console.log("No")
