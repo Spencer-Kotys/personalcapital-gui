@@ -53,5 +53,7 @@ else:
 
 try:
     pc.login(email, password)
+    print("Login Success")
 except:
     pc.two_factor_challenge(TwoFactorVerificationModeEnum.SMS)
+    print("Sending two factor challenge")
