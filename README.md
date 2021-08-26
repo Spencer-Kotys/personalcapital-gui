@@ -1,6 +1,6 @@
 # personalcapital-gui
 This is a repo for a GUI application built with Electron that uses a python library built by [haochi](https://github.com/haochi) to access the Personal Capital API.
-The end goal is to be able to run the service as an Electron app to allow for quick updates without the need to login into the site.
+The end goal is to be able to run the service as an Electron app to allow for quick updates without the need to log into the site.
 
 [Personal Capital Repo](https://github.com/haochi/personalcapital)
 
