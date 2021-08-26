@@ -65,5 +65,6 @@ function tfa() {
   pyshell.PythonShell.run('tfa.py', options, function (err, results) {
     if (err) err
     console.log('results', results)
+    window.location.href = 'info.html'
   })
 }
