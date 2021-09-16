@@ -18,11 +18,12 @@ The end goal is to be able to run the service as an Electron app to allow for qu
 
 4. Install electron with `npm i --save-dev electron`
 
-5. Create files email.txt and password.txt which contain your personal capital
-email and password
+5. Type `npm start`
 
-6. Type `npm start`
+6. Enter your username and password and click login
 
-7. Enter your two factor code from your phone into the console
+7. Enter the two factor code from your phone and click submit two factor code
 
-8. Now you should be logged in and should see the numbers update
+8. You should now be logged in and your credentials should be stored.
+
+9. Future logins should not require reentering username, password, or tfa code.
